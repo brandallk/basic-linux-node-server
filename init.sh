@@ -1,16 +1,6 @@
 #!/bin/bash
 
-sudo curl -sL https://rpm.nodesource.com/setup_lts.x | sudo bash -
-sudo yum install -y nodejs
-
-mkdir node-server && pushd node-server
-npm init -y
-npm install express --save-dev
-popd
-
-cp basic-linux-node-server/index.js node-server/index.js
-
-sudo cp basic-linux-node-server/blue.service /lib/systemd/system/blue.service
-
-sudo systemctl enable blue
-sudo systemctl start blue
+sudo yum update -y
+sudo yum install -y git
+git clone https://github.com/brandallk/basic-linux-node-server.git
+./basic-linux-node-server/init.sh
