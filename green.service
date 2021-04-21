@@ -1,5 +1,5 @@
 [Service]
-ExecStart=/usr/bin/node /home/ec2-user/node-server/index-blue.js
+ExecStart=/usr/bin/node /home/ec2-user/node-server/index-green.js
 ExecStop=echo "stopping"
 Restart=always
 StandardOutput=syslog
